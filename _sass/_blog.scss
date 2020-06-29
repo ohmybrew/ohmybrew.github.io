@@ -74,9 +74,11 @@ code {
             padding-bottom: 3rem;
         }
 
-        p {
+        p, ul, ol {
             line-height: 26px;
+        }
 
+        p {
             img {
                 display: block;
                 margin: 0 auto;
