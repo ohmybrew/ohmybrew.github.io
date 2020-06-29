@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Setting Up Lumen + Redis
-permalink: setting-up-lumen-and-redis
+title: Setting Up Lumen with Redis
+permalink: setting-up-lumen-with-redis
 date: '2017-11-19 11:43:01'
 ---
 

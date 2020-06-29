@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Upgrading Fedora 30 to 31 While Avoiding Kernel 5.4.7
+title: Upgrading Fedora 30 to 31 while avoiding kernel 5.4.7
 permalink: upgrading-fedora-30-to-31-avoiding-kernel
 date: '2020-01-15 19:13:27'
 ---

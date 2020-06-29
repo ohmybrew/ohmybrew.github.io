@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gathering User-Input with Shopify
+title: Gathering user input with Shopify
 permalink: gathering-user-input-with-shopify
 date: '2013-08-05 16:43:02'
 ---

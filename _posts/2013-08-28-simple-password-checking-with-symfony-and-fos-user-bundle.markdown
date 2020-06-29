@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Simple Password Checking with Symfony and FOS User Bundle
+title: Simple password checking with Symfony and FOS User Bundle
 permalink: simple-password-checking-with-symfony-and-fos-user-bundle
 date: '2013-08-28 16:22:49'
 ---

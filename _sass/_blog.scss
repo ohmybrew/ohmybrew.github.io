@@ -53,7 +53,7 @@ code {
     &.highlighter-rouge {
         font-size: 0.8em;
         border: 1px dotted;
-        padding: 0 0.4em;    
+        padding: 0 0.4em;
     }
 }
 
@@ -61,6 +61,10 @@ code {
     ul {
         li {
             margin-bottom: 4rem;
+
+            a {
+                line-height: 26px;
+            }
 
             span {
                 font-size: .85em;

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Single Field Error in Symfony
+title: Get single field error in Symfony
 permalink: get-single-field-error-in-symfony
 date: '2013-12-12 23:04:07'
 ---

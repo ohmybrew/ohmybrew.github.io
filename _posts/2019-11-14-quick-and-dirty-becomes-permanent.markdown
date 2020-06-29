@@ -1,6 +1,6 @@
 ---
 layout: post
-title: When "Quick'n'Dirty" Becomes Permanent
+title: When "quick and dirty" becomes permanent
 permalink: when-quick-and-dirty-becomes-permanent
 date: '2019-11-14 20:37:04'
 ---

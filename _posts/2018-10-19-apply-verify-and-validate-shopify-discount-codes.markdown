@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Apply, Verify, and Validate Shopify Discount Codes
+title: Apply, verify, and validate Shopify discount codes
 permalink: apply-verify-and-validate-shopify-discount-codes
 date: '2018-10-19 02:14:59'
 ---

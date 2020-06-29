@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2018 Self Reflection
+title: 2018 Self reflection
 permalink: 2018-self-reflection
 date: '2019-02-06 19:09:24'
 ---

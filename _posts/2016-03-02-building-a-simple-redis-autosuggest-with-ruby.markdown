@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building a Simple Redis Autosuggest with Ruby
+title: Building a simple Redis autosuggest with Ruby
 permalink: building-a-simple-redis-autosuggest-with-ruby
 date: '2016-03-02 01:02:11'
 ---

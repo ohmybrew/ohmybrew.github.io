@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Woocommerce - Sorting Product by Category
+title: Woocommerce - Sorting product by category
 permalink: woocommerce-sorting-products-by-category
 date: '2013-10-05 15:56:26'
 ---

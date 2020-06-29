@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Precompiling Assets In Your Rails Engine
+title: Precompiling assets in your Rails Engine
 permalink: precompiling-assets-in-your-rails-engine
 date: '2016-05-03 23:26:22'
 ---

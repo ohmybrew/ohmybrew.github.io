@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Guts: With Multisite'
+title: 'Guts: With multisite'
 permalink: guts-now-with-multisite
 date: '2016-04-24 23:38:00'
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Vuex & Data: Keeping It Clean'
+title: 'Vuex & Data: Keeping it clean'
 permalink: vuex-data-keeping-it-clean
 date: '2019-07-19 16:44:52'
 ---

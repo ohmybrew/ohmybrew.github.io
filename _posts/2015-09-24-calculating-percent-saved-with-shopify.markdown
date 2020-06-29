@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Calculating Percent Saved with Shopify
+title: Calculating percent saved with Shopify
 permalink: calculating-percent-saved-with-shopify
 date: '2015-09-24 16:09:00'
 ---

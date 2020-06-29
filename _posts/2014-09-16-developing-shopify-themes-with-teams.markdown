@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Developing Shopify Themes with Teams
+title: Developing Shopify themes with teams
 permalink: developing-shopify-themes-with-teams
 date: '2014-09-16 22:17:10'
 ---

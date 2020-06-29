@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Setting Up Lumen + Mailer
-permalink: setting-up-lumen-and-mail
+title: Setting Up Lumen with Mailer
+permalink: setting-up-lumen-with-mail
 date: '2017-11-19 11:04:33'
 ---
 

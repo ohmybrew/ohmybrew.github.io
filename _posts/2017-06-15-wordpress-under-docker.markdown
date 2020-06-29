@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Wordpress Under Docker: A Basic Guide'
+title: 'Wordpress Under Docker: A basic guide'
 permalink: wordpress-under-docker
 date: '2017-06-15 09:53:10'
 ---
@@ -56,11 +56,11 @@ Once you're done the quick setup simply run `docker-compose up` in the main dire
 
 After it's done, simply login and visit Appearance. If you have your theme setup as per Wordpress requirements (`style.css` (with info) and `index.php`)  then you will see it in the theme list. Hit "Activate" and you're ready to go.
 
-## Windows (WSL) Tips
+## Windows (WSL1) Tips
 
-If you're running this under WSL, be sure you have Docker on Windows settings set to expose Docker daemon without TLS (its under General panel).
+If you're running this under WSL1, be sure you have Docker on Windows settings set to expose Docker daemon without TLS (its under General panel).
 
-Also, WSL accesses your C:\ drive via `/mnt/c` but Docker requires `/c`. To resolve this issue simply create a symlink via `ln -s /mnt/c /c`. If this is not done, you'll have issues with Docker under WSL trying to find files and map volumes. This means you also need to run `docker-compose` commands under `/c` as well.
+Also, WSL1 accesses your C:\ drive via `/mnt/c` but Docker requires `/c`. To resolve this issue simply create a symlink via `ln -s /mnt/c /c`. If this is not done, you'll have issues with Docker under WSL trying to find files and map volumes. This means you also need to run `docker-compose` commands under `/c` as well.
 
 To quickly switch to `/c` no matter what directory you're under, open `$HOME/.bash_aliases` and add this entry:
 

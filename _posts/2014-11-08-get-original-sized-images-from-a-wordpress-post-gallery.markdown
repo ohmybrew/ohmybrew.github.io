@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Original Sized Images from a Wordpress Post Gallery
+title: Get original sized images from a Wordpress Post Gallery
 permalink: get-original-sized-images-from-a-wordpress-post-gallery
 date: '2014-11-08 20:36:59'
 ---
