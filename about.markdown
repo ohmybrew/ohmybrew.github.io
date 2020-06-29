@@ -49,3 +49,15 @@ I quickly moved onto getting heavily involved with Python for automation and web
 The 2000s we're a rocky time for development, it was a time of great change, spin-offs, and maturity for many languages and ecosystems for those languages. The web came into a heavy play. I eventually started my professional career a year after starting those mods of the forums. I began profesionally with PHP, Python, and Ruby, as they were the job demands for the web at the time in my area; this is where my experience took off. I found my love for crafting backend systems for the web.
 
 Since then, I've taken what I've learned and continually applied it. I've worked with many name-brands in my career and developed enterprise solutions for them, as well as provide consultation.
+
+## The name
+
+**Osiset**; _oh-sy-set_.
+
+I've always been intrigued by Egyptian history and their gods growing up. My username is simply a combination of the god Osiris and his brother Set.
+
+Osiris was the first major written god Egypt culture. A tall green deity with pharaoh's beard. A respected god of many duties ranging from fertility, life, resurrection, and even the afterlife. His brother Set, who killed Osiris, was a god of deserts, disorder, and chaos.
+
+Combining the two together gives a glimpse to the elements of development... birth, death, resurrection, disorder, and chaos that a project or process goes through.
+
+Odd and unique.
