@@ -2,24 +2,19 @@
 layout: default
 ---
 
-  {{ content }}
+{{ content }}
 
-  {% assign posts = site.posts %}
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
+{%- assign posts = site.posts -%}
+{%- if posts.size > 0 -%}
     <ul>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        <h3>
-          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h3>
-        <span><time>{{ post.date | date: date_format }}</time></span>
-      </li>
-      {%- endfor -%}
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- for post in posts -%}
+            <li>
+                <h3>
+                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </h3>
+                <span><time datetime="{{ post.date }}">{{ post.date | date: date_format }}</time></span>
+            </li>
+        {%- endfor -%}
     </ul>
-  {%- endif -%}
-
-</div>
+{%- endif -%}

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto Mono', Helvetica, Arial, sans-serif;
+    font-family: $font-family;
 
     & > header {
         text-align: center;
@@ -17,6 +17,7 @@ body {
     & > footer {
         padding-top: 4rem !important;
         padding-bottom: 4rem !important;
+        line-height: 26px;
 
         hr {
             margin-bottom: 2em;
