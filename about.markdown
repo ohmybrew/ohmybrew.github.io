@@ -54,10 +54,4 @@ Since then, I've taken what I've learned and continually applied it. I've worked
 
 **Osiset**; _oh-sy-set_.
 
-I've always been intrigued by Egyptian history and their gods growing up. My username is simply a combination of the god Osiris and his brother Set.
-
-Osiris was the first major written god Egypt culture. A tall green deity with pharaoh's beard. A respected god of many duties ranging from fertility, life, resurrection, and even the afterlife. His brother Set, who killed Osiris, was a god of deserts, disorder, and chaos.
-
-Combining the two together gives a glimpse to the elements of development... birth, death, resurrection, disorder, and chaos that a project or process goes through.
-
-Odd and unique.
+A combination of two Egyptian gods &mdash; Osiris and his brother Set. Combining the two together gives a glimpse to the elements of development... birth, death, resurrection, disorder, and chaos that a project or process goes through.
