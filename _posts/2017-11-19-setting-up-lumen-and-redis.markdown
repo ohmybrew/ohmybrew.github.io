@@ -5,7 +5,7 @@ permalink: setting-up-lumen-with-redis
 date: '2017-11-19 11:43:01'
 ---
 
-This is more of an extension of my previous post "Setting Up Lumen + Mail". I wanted to take it a step furthur and show the basic setup for getting Redis to work, so you can queue not only mail, but jobs.
+This is more of an extension of my previous post "Setting Up Lumen + Mail". I wanted to take it a step further and show the basic setup for getting Redis to work, so you can queue not only mail, but jobs.
 
 First, run `composer require illuminate/redis:5.5` to grab the Redis components.
 
@@ -41,7 +41,7 @@ return [
 
 ```
 
-Don't forget to setup all your environment variables for Redis, as well, to enable Redis for job processing and cache, set the following environment variables:
+Don't forget to set up all your environment variables for Redis, as well, to enable Redis for job processing and cache, set the following environment variables:
 
 ```conf
 CACHE_DRIVER=redis

@@ -15,13 +15,13 @@ Let's say we have a bunch of products:
 + 1990 Blaster Ray!! - ID: 2
 + (Nuke) Bomb Gun #8 - ID: 3
 
-Looking at our products, we can see there is a different and unpredictable titles. We have punctuation, special characters, numbers, and letters. If someone types `Gun` we'd like to see our search suggest `(Nuke) Bomb Gun #8` and `Tommy's Ray Gun`.
+Looking at our products, we can see there is a different and unpredictable title. We have punctuation, special characters, numbers, and letters. If someone types `Gun` we'd like to see our search suggest `(Nuke) Bomb Gun #8` and `Tommy's Ray Gun`.
 
 Redis does not offer a full-text search solution like ElasticSearch, so we simply can't drop `Tommy's Ray Gun` string into Redis and expect to search it. We need to come up with a clever way.
 
 My solution was to split each letter up of each word in each product. For each letter set, we store the products which contain those letters. So common sets of letters in titles will be stored together.
 
-As a basic example, lets look at a singular word. `RUBY` we can split this up into `R` then `RU` then `RUB` and finally `RUBY`.
+As a basic example, let's look at a singular word. `RUBY` we can split this up into `R` then `RU` then `RUB` and finally `RUBY`.
 
 Lets store these product titles in this manner with the values being the title and ID for the product into a [Redis sorted set](http://redis.io/commands/ZADD). Now, when someone types `gun` in your search box we should be able to call `p:gun` key on Redis and get:
 
@@ -30,7 +30,7 @@ Lets store these product titles in this manner with the values being the title a
 
 ## Processing the Objects
 
-So now we have a plan in place, lets write a quick script to import the objects you wish to autosuggest, into your Redis database. As before, we need to split each word up of each object.
+So now we have a plan in place, let's write a quick script to import the objects you wish to autosuggest, into your Redis database. As before, we need to split each word up of each object.
 
 ```ruby
 
@@ -81,7 +81,7 @@ Processing (Nuke) Bomb Gun #8...
 
 
 
-Here we can see how the script cleans the titles, then breaks them down to produce key names for Redis to use as we had hoped for in the planning section. Now, lets import this into Redis. Simply change line 27:
+Here we can see how the script cleans the titles, then breaks them down to produce key names for Redis to use as we had hoped for in the planning section. Now, let's import this into Redis. Simply change line 27:
 
 ```ruby
 # BEFORE
@@ -100,7 +100,7 @@ Processing 1990 Blaster Ray!!...
 Processing (Nuke) Bomb Gun #8...
 ```
 
-Login to Redis and lets check if it works as planned. Since this is a sorted set we need to use [ZRANGE](http://redis.io/commands/ZRANGE).
+Login to Redis and let's check if it works as planned. Since this is a sorted set we need to use [ZRANGE](http://redis.io/commands/ZRANGE).
 
 ```
 > redis-cli
@@ -117,7 +117,7 @@ Awesome, it works! We now have sorted sets with groups of products based on part
 
 Now that we have a script (that you should expand on into a proper lib), we need to now show results to the user for when they're searching.
 
-Heres a quick Sinatra example (of course you can use more advanced techniques as well)
+Here's a quick Sinatra example (of course you can use more advanced techniques as well)
 
 ```ruby
 require "redis"

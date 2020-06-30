@@ -7,13 +7,13 @@ date: '2017-11-19 11:04:33'
 
 ## What is Lumen
 
-[Lumen](https://lumen.laravel.com/) is a micro-framework built by Laravel. Its geared towards small services like APIs, job handling, or very small projects. Laravel is all-inclusive, where as Lumen is more bare-bones but moderately featured; however it doesn't feel as lean as something like Slim.
+[Lumen](https://lumen.laravel.com/) is a micro-framework built by Laravel. Its geared towards small services like APIs, job handling, or very small projects. Laravel is all-inclusive, whereas Lumen is more bare-bones but moderately featured; however, it doesn't feel as lean as something like Slim.
 
 ## Setting Up Mailing
 
-Recently I ported a small app from Sinatra to Lumen for trial with a client. Its a job processing app for Shopify, where it would take data from a webhook, process it with a worker, and send back some data later. It needed to be fast, as like other webhook-focused app, it has to keep up with the high demand.
+Recently I ported a small app from Sinatra to Lumen for trial with a client. Its a job processing app for Shopify, where it would take data from a webhook, process it with a worker, and send back some data later. It needed to be fast, as, like other webhook-focused apps, it has to keep up with the high demand.
 
-One issue I ran into was mailing, its not enabled by default in Lumen, and there are many posts throughout Google of people attempting to set it up. There is also many outdated ways which only worked for old version of Lumen.
+One issue I ran into was mailing, it's not enabled by default in Lumen, and there are many posts throughout Google of people attempting to set it up. There are also many outdated ways which only worked for the old version of Lumen.
 
 Through trial and error, I managed to find a working setup I thought I would share.
 
@@ -81,11 +81,11 @@ return [
 
 ```
 
-That's it, you're done the setup! Don't forget to setup your environment variables for production.
+That's it, you're done the setup! Don't forget to set up your environment variables for production.
 
 ### Creating a Mailer
 
-Now that we're setup, you can create a mailer in `app/Mail/`, heres an example to go by (`app/Mail/Winnings`):
+Now that we're setup, you can create a mailer in `app/Mail/`, here's an example to go by (`app/Mail/Winnings`):
 
 ```php
 <?php namespace App\Mail;
@@ -195,10 +195,6 @@ class WinningsMailTest extends TestCase
 }
 ```
 
-Running the tests should pass if everything is setup correctly. For more information on testing mailables, see [Laravel's documentation on faking](https://laravel.com/docs/5.5/mocking#mail-fake).
+Running the tests should pass if everything is set up correctly. For more information on testing mailables, see [Laravel's documentation on faking](https://laravel.com/docs/5.5/mocking#mail-fake).
 
 I hope this was a quick and useful setup for anyone having issues. Good luck!
-
-----
-
-*Cover image credit: [Mikael Kristenson](https://unsplash.com/photos/MYXf7tGEntk)*

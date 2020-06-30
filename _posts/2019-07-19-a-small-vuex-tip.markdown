@@ -7,7 +7,7 @@ date: '2019-07-19 16:44:52'
 
 ## Introduction
 
-Vuex is a state management library, a centralized storage of data for your whole application. Its well documented, beautiful, and easy to use with Vue. The part I want to talk about today is the **data** portion.
+Vuex is a state management library, centralized storage of data for your whole application. It's well documented, beautiful, and easy to use with Vue. The part I want to talk about today is the **data** portion.
 
 I have increasingly seen cases where the **data** state of Vuex gets transformed and represents something more than just plain-old **data** ; that's a problem in the long run.
 
@@ -33,7 +33,7 @@ At first, this seems convenient to the developer, because in any part of their c
 
 But, what happens when you want to serialize that data to JSON? Store it somewhere else outside of Vuex? Such as using a library like `vuex-persist`?
 
-You'll immidately loose all those nice model functions you've built out and you can not easily restore the state because its more than just **data** at this point.
+You'll immediately loose all those nice model functions you've built out and you can not easily restore the state because its more than just **data** at this point.
 
 ## The Solution
 

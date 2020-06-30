@@ -5,13 +5,13 @@ permalink: testing-with-shopify-app
 date: '2016-06-21 01:17:33'
 ---
 
-[shopify_app](https://github.com/Shopify/shopify_app) is a great Gem to quickly build a Shopify App with Rails. It handles all the  verifications, authorizations, webhooking, and more; leaving you to focus on developing your app. This post is to serve as a quick-tip on how to unit-test your app with the Gem.
+[shopify_app](https://github.com/Shopify/shopify_app) is a great Gem to quickly build a Shopify App with Rails. It handles all the verifications, authorizations, webhook, and more; leaving you to focus on developing your app. This post is to serve as a quick tip on how to unit-test your app with the Gem.
 
 Other than the install page, most likely your app will require a shop to be logged in for all routes. `shopify_app`, upon installation will create a fixture file in `test/fixtures/shops.yml` of your Rails application.
 
-Inspecting it you will see its filled with one shop, `regular-shop.myshopify.com`, and a simple token. When running `bundle exec rake test` (after migrations are done for test environment of course), it will populate the shop database table with the fixture data in `shop.yml`.
+Inspecting it you will see it's filled with one shop, `regular-shop.myshopify.com`, and a simple token. When running `bundle exec rake test` (after migrations are done for a test environment of course), it will populate the shop database table with the fixture data in `shop.yml`.
 
-Now that we have a shop we can "log into", lets create a support module for the unit tests. Create a file called `shopify_session_support.rb` inside `test/support`.
+Now that we have a shop we can "log into", let's create a support module for the unit tests. Create a file called `shopify_session_support.rb` inside `test/support`.
 
 ```ruby
 # test/support/shopify_session_support.rb

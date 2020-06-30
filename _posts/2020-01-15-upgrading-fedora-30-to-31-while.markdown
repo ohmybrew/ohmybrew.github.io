@@ -5,15 +5,15 @@ permalink: upgrading-fedora-30-to-31-avoiding-kernel
 date: '2020-01-15 19:13:27'
 ---
 
-Fedora 30 was released on April 30th 2019.
+Fedora 30 was released on April 30th, 2019.
 
-Fedora 31 was released on October 29th 2019.
+Fedora 31 was released on October 29th, 2019.
 
 While Fedora 30 had minimal reported issues (at least socially), Fedora 31 was a different case altogether due to the 5.4.7 packaged kernel where Fedora 30 had 5.0 (later updated to 5.3.x).
 
-There's been several reports of users' WIFI completely dropping, Ethernet not working, audio not working, and so on.
+There have been several reports of users' WIFI completely dropping, Ethernet not working, audio not working, and so on.
 
-While I normally wait a few months after a major release for the dust to settle, there's a few features I was wanting, so I decided to upgrade and create a guide on how to keep your existing kernel during the upgrade.
+While I normally wait a few months after a major release for the dust to settle, there are a few features I was wanting, so I decided to upgrade and create a guide on how to keep your existing kernel during the upgrade.
 
 ## Upgrade
 
@@ -35,7 +35,7 @@ You will be asked to accept various keys and accept the package summary. Once yo
 
 Your system will reboot to a Plymouth screen with a progress bar showing the current status of the upgrade.
 
-This upgrade take approx. 15 minutes from my experience.
+This upgrade takes approx. 15 minutes from my experience.
 
 ## Reboot
 

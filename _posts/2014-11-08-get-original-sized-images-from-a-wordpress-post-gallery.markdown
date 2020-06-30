@@ -5,7 +5,7 @@ permalink: get-original-sized-images-from-a-wordpress-post-gallery
 date: '2014-11-08 20:36:59'
 ---
 
-Recently I was working on a project where I needed to modify an existing page which had multiple galleries. This change required me to have access to the original uploaded images. Heres a simple function I wrote which returns the images easily in an array format.  
+Recently, I was working on a project where I needed to modify an existing page that had multiple galleries. This change required me to have access to the original uploaded images. Here's a simple function I wrote which returns the images easily in an array format.  
   
 ```bash
 # Input

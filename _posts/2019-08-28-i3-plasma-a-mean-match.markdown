@@ -18,9 +18,9 @@ I have been struggling recently to find a good match of the following:
 
 Plasma on its own, much like any other desktop environment such as XFCE or GNOME, does a great job of throwing you into a full-featured and worry-free setup. Everything from suspending, audio, Bluetooth, and more is handled pretty much out-of-the-box these days.
 
-However, all the major desktop environments are geared towards floating and manually managing windows like you would with Windows or OSX. You end up spending a good chunk of time attached to your mouse... moving, resizing, and managing those windows to do your work. Yes, you could tweak the settings of these desktop environments to semi-simulate what a good window manager can do, but its not the _same_.
+However, all the major desktop environments are geared towards floating and manually managing windows like you would with Windows or OSX. You end up spending a good chunk of time attached to your mouse... moving, resizing, and managing those windows to do your work. Yes, you could tweak the settings of these desktop environments to semi-simulate what a good window manager can do, but it is not the _same_.
 
-With a configurable window manager, such as i3, sway, bspwm, and others, you're able to solely use your keyboard to manage windows in a way thats efficent, natural, and powerful.
+With a configurable window manager, such as i3, sway, bspwm, and others, you're able to solely use your keyboard to manage windows in a way that's efficient, natural, and powerful.
 
 For someone like me, who doesn't use a mouse (I use my Thinkpad dot only) and has back/neck issues... the less I move around (reaching for mice), the better!
 
@@ -30,24 +30,26 @@ So, to hit all points above... a combo of Plasma and i3 works wonders. And the b
 
 I followed [this guide](https://ryanlue.com/posts/2019-06-13-kde-i3) originally with some tweaks. Since I use OpenSUSE, I did the following for my system (slightly different paths):
 
-    # Install i3
-    sudo zypper in i3
-    
-    # Create a Plasma + i3 launcher script
-    $ echo -e '#!/bin/sh\n\nKDEWM=/usr/bin/i3 startkde' > /usr/local/bin/startkde-i3
-    $ sudo chown root.root /usr/local/bin/startkde-i3
-    $ sudo chmod 755 /usr/local/bin/startkde-i3
-    
-    # Create a custom desktop sessions directory
-    $ sudo cp -a /usr/share/xsessions /usr/local/share/xsessions
-    
-    # Create a new desktop session file for plasma + i3
-    $ cp /usr/local/share/xsessions/default.desktop /usr/local/share/xsessions/plasma-i3.desktop
-    $ sudo sed -i 's|/usr/bin/startkde|/usr/local/bin/startkde-i3|' /usr/local/share/xsessions/plasma-i3.desktop
-    $ sudo sed -i '/Name.*=/ s/$/-i3/' /usr/local/share/xsessions/plasma-i3.desktop
-    
-    # Configure sddm (the login screen) to use our new desktop sessions directory
-    $ echo -e '\n\n[X11]\nSessionDir=/usr/local/share/xsessions' | sudo tee -a /usr/lib/sddm/sddm.conf.d/00-general.conf
+```bash
+# Install i3
+sudo zypper in i3
+
+# Create a Plasma + i3 launcher script
+$ echo -e '#!/bin/sh\n\nKDEWM=/usr/bin/i3 startkde' > /usr/local/bin/startkde-i3
+$ sudo chown root.root /usr/local/bin/startkde-i3
+$ sudo chmod 755 /usr/local/bin/startkde-i3
+
+# Create a custom desktop sessions directory
+$ sudo cp -a /usr/share/xsessions /usr/local/share/xsessions
+
+# Create a new desktop session file for plasma + i3
+$ cp /usr/local/share/xsessions/default.desktop /usr/local/share/xsessions/plasma-i3.desktop
+$ sudo sed -i 's|/usr/bin/startkde|/usr/local/bin/startkde-i3|' /usr/local/share/xsessions/plasma-i3.desktop
+$ sudo sed -i '/Name.*=/ s/$/-i3/' /usr/local/share/xsessions/plasma-i3.desktop
+
+# Configure sddm (the login screen) to use our new desktop sessions directory
+$ echo -e '\n\n[X11]\nSessionDir=/usr/local/share/xsessions' | sudo tee -a /usr/lib/sddm/sddm.conf.d/00-general.conf
+```
 
 Logging out, you'll be presented with an option in SDDM for `Plasma-i3`.
 
@@ -67,7 +69,7 @@ You can utilize your Xresources to pull in config values into i3.
 
 You're able to use any "bar" or panel you like with this setup.. weather it be i3bar, polybar, or plain Plasma panel as I have.
 
-If you decide to use Plasma panels, definately install [Virtual Desktop Bar Widget](https://store.kde.org/p/1315319/), its a virtual desktop pager which is configurable and simple, and mimics how most other "bars" handle workspaces (its the widget in the screenshot above with "web", "code", "mail", etc).
+If you decide to use Plasma panels, definitely install [Virtual Desktop Bar Widget](https://store.kde.org/p/1315319/), its a virtual desktop pager which is configurable and simple, and mimics how most other "bars" handle workspaces (its the widget in the screenshot above with "web", "code", "mail", etc).
 
 ## Conclusion
 

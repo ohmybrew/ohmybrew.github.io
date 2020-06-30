@@ -5,9 +5,9 @@ permalink: extending-a-rails-engine
 date: '2016-02-20 12:27:45'
 ---
 
-Redesigning my CMS in Rails has been great fun. Theres been many challenges faced, and many conquered (like having 100% code coverage :D). One thought that crossed my mind after building the monster was how do you extend an engine? By extending, I mean to add or overwrite methods of controllers, models, helpers, etc.
+Redesigning my CMS in Rails has been great fun. There have been many challenges faced, and many conquered (like having 100% code coverage :D). One thought that crossed my mind after building the monster was how do you extend an engine? By extending, I mean to add or overwrite methods of controllers, models, helpers, etc.
 
-The [Rails Engine Guide](http://edgeguides.rubyonrails.org/engines.html#improving-engine-functionality) is excellent and it has two main points on extending engine functionality. One is by use of "decorators" and the other is by abstracting all your controller and model code into concerns inside your engine. While I like the concern method, as it gives more flexibility for complex extensions, its overkill in my opinion. The [decorator](http://edgeguides.rubyonrails.org/engines.html#overriding-models-and-controllers) option is very easy to implement without changing much of your existing engine.
+The [Rails Engine Guide](http://edgeguides.rubyonrails.org/engines.html#improving-engine-functionality) is excellent and it has two main points on extending the engine functionality. One is by use of "decorators" and the other is by abstracting all your controller and model code into concerns inside your engine. While I like the concern method, as it gives more flexibility for complex extensions, its overkill in my opinion. The [decorator](http://edgeguides.rubyonrails.org/engines.html#overriding-models-and-controllers) option is very easy to implement without changing much of your existing engine.
 
 The first step as the Rails guide shows you, is to add support for decorator loading inside your engine lib. Below is how I did it in my CMS engine called Guts:
 
@@ -26,7 +26,7 @@ end
 
 This will look for all decorators in the main Rails apps for the path `app/decorators/{controllers,models,concerns,helpers,etc}/guts/{file}_decorator(s).rb` and load them in using [require_dependency](http://apidock.com/rails/ActiveSupport/Dependencies/Loadable/require_dependency).
 
-Now the the engine has support to load the decorators, lets move on to some examples. All following examples from here-on-out will be using my engine for example purposes.
+Now the engine has support to load the decorators, lets move on to some examples. All following examples from here-on-out will be using my engine for example purposes.
 
 ## Controllers
 
@@ -63,7 +63,7 @@ end
 
 This will now prepend our new route to the engine and map `/guts/types/explode` to our decorator action.
 
-Lastly, create a view in `app/views/guts/types/` called `explode.html.erb` with whatever you wish to display! This is the basics on extending a controller.
+Lastly, create a view in `app/views/guts/types/` called `explode.html.erb` with whatever you wish to display! This is the basics of extending a controller.
 
 ## Models
 

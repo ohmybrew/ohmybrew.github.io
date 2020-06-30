@@ -5,7 +5,7 @@ permalink: activerecord-and-liquid-drops-with-sinatra
 date: '2015-10-15 02:00:00'
 ---
 
-Normally I use ERB when doing templates but there was a special use-case recently where I needed to allow the app user to modify a specific template. [Liquid templates](http://liquidmarkup.org/) (what Jekyll and Shopify uses) was perfect for this situation because it has a simple syntax for anyone to pick up and its also safe due to it's scope limited to whats passed to the template.
+Normally I use ERB when doing templates but there was a special use-case recently where I needed to allow the app user to modify a specific template. [Liquid templates](http://liquidmarkup.org/) (what Jekyll and Shopify use) was perfect for this situation because it has a simple syntax for anyone to pick up and it's also safe due to its scope limited to what's passed to the template.
 
 Let's suppose you have two models in your Sinatra application -- `Student` and `Book`.
 
@@ -81,7 +81,7 @@ module MyApp
 end
 ```
 
-Ok so now we have our models and drops setup. As you can see above we've setup methods for accessing the student's name, their books, the book title, barcode, etc. All of these methods can be used in a Liquid template now.
+Ok so now we have our models and drops setup. As you can see above we've set up methods for accessing the student's name, their books, the book title, barcode, etc. All of these methods can be used in a Liquid template now.
 
 But now, how do we easily combine the two? Easy, we utilize `to_liquid` method by adding it to our model which Liquid calls when rendering the template. We then return the proper drop for the model inside the new `to_liquid` method.
 
@@ -135,4 +135,4 @@ My name is {{ student.full_name }}. I have {{ student.books.size }} books!
 {% endraw %}
 ```
 
-That's it for this little how-to. I will note there is other ways to expose your ActiveRecord models to work automatically with Liquid but this article just shows you a more expanded and controlled version.
+That's it for this little how-to. I will note there are other ways to expose your ActiveRecord models to work automatically with Liquid but this article just shows you a more expanded and controlled version.

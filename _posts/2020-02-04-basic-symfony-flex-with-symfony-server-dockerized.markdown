@@ -5,7 +5,7 @@ permalink: basic-symfony-flex-with-symfony-server-dockerized
 date: '2020-02-04 00:56:22'
 ---
 
-Symfony Flex allows you to tailor a Symfony application to your needs by building it with "recipes". Its provides a way to create a very lean and clean Symfony application with only the bells and whistles you choose.
+Symfony Flex allows you to tailor a Symfony application to your needs by building it with "recipes". It provides a way to create a very lean and clean Symfony application with only the bells and whistles you choose.
 
 In this post, I'll show you how to create a Dockerized version of your Flex application that utilizes the Symfony local server for use during local development.
 
@@ -15,19 +15,19 @@ _If you already have a Symfony Flex application created, you can skip this secti
 
 `composer create-project symfony/skeleton myapi`
 
-This will create a skeleton project in a directory called `myapi` with everything setup and ready to go in an easy to navigate structure.
+This will create a skeleton project in a directory called `myapi` with everything set up and ready to go in an easy to navigate structure.
 
 Next, we install the API recipe which installs bundles such as Doctrine, CORS handling, Twig templating, validators, etc. It will give you barebones ability to easily create an API base.
 
 `composer req api`
 
-You're now free to create any entities, repositories, controllers, services, etc. that you require, or you can come back to that at a later time, its not required.
+You're now free to create any entities, repositories, controllers, services, etc. that you require, or you can come back to that at a later time, it is not required.
 
 ## Dockerizing
 
 ### Docker Compose
 
-For this example, we'll simply setup a MySQL server, Redis server, and PHP CLI. We will manage all this through Docker Compose.
+For this example, we'll simply set up a MySQL server, Redis server, and PHP CLI. We will manage all this through Docker Compose.
 
     # docker-compose.yml
     version: '3'
@@ -66,13 +66,13 @@ For this example, we'll simply setup a MySQL server, Redis server, and PHP CLI. 
         stdin_open: true
         tty: true
 
-The above will pull in the `mysql:5.7` image with some initial environment variables _(you're free to replace them)_. It will mount it's data volume to `./docker/db` of your `myapi` directory for persistance. It will also map port `3306` on your host machine to forward to `3306` in the container.
+The above will pull in the `mysql:5.7` image with some initial environment variables _(you're free to replace them)_. It will mount its data volume to `./docker/db` of your `myapi` directory for persistence. It will also map port `3306` on your host machine to forward to `3306` in the container.
 
 Below that, we pull in the `redis` image and mount it's volume to `./docker/redis` of your `myapi` directory for storage. It will also map port `6379` of your host machine to forward to `6379` in the container. You can adjust the entrypoint to your needs.
 
 Lastly, `web` will build a custom image based on a `Dockerfile` below. It will mount your `myapi` directory to `/var/www/html` inside the container. It will also map port `8080` of your host machine to forward to port `80` in the container.
 
-Its also a good idea to add these volume paths to your `.gitignore` to avoid checking them in to your repository.
+It is also a good idea to add these volume paths to your `.gitignore` to avoid checking them into your repository.
 
 ### Dockerfile
 
@@ -103,7 +103,7 @@ In the commands, we tell it to install `wget` which is required to install the S
 
 ## Running
 
-Its a good idea to now modify your `.env.local` file to connect to the container's MySQL instance and Redis instance with the credentials setup in the `docker-compose.yml` file and the special mapping keywords, `redis` and `db` for the address.
+It is a good idea to now modify your `.env.local` file to connect to the container's MySQL instance and Redis instance with the credentials set up in the `docker-compose.yml` file and the special mapping keywords, `redis` and `db` for the address.
 
 Examples:
 
@@ -114,9 +114,9 @@ Finally, executing `docker-compose up` will build and boot the containers. If yo
 
 `[OK] Web server listening on http://127.0.0.1:80`
 
-Now, if you open you're browser to `http://127.0.0.1:8080` _(8080 is our local port which will forward to port 80 in the container),_ you should see the Symfony welcome screen.
+Now, if you open your browser to `http://127.0.0.1:8080` _(8080 is our local port which will forward to port 80 in the container),_ you should see the Symfony welcome screen.
 
-As a side note, it would be a good idea to setup a hosts file entry so you don't need to type your localhost every time, and also enabling HTTPS would be a good measure, but not necessarily needed for local development.
+As a side note, it would be a good idea to set up a hosts file entry so you don't need to type your localhost every time, and also enabling HTTPS would be a good measure, but not necessarily needed for local development.
 
 ## Conclusion
 

@@ -7,7 +7,7 @@ date: '2015-09-24 16:09:00'
 
 Visually displaying to the customer how much they are saving is a big help to driving them towards a purchase. This is a simple snippet and guide to help you achieve this functionality in your Shopify stores.
 
-First, to calculate the percentage saved, lets look at the basic math for this in plain text.
+First, to calculate the percentage saved, let's look at the basic math for this in plain text.
 
     percent saved = ((old price - new price) / old price) * 100
 
@@ -30,7 +30,7 @@ Create a new snippet in Shopify called `percent-savings.liquid` and use the foll
 {% endraw %}
 ```
 
-As an explaination of the code:
+As an explanation of the code:
 
 - Lines 1 & 2 we are converting the prices to a float so we can use decimal places
 - Line 3 is getting the difference which is simply subtracting the new price from the old price
