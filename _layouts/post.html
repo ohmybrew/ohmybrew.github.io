@@ -6,6 +6,11 @@
         <p><time datetime="{{ page.date }}">{{ page.date | date: "%b %-d,  %Y" }}</time></p>
     </header>
     {{ content }}
+    <footer>
+        <small>
+            <a href="https://github.com/{{ site.github_username }}/osiset.github.io/blob/master/{{ page.path }}" target="_blank" rel="noopener">Source</a>
+        </small>
+    </footer>
 </article>
 
 {% include footer.html %}

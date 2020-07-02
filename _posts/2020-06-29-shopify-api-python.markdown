@@ -67,7 +67,6 @@ with Client(sess, opts) as client:
 ### REST
 
 ```python
-```python
 from basic_shopify_api import AsyncClient
 
 # ...
