@@ -1,17 +1,29 @@
 title: Osiset
 email: tyler@osiset.com
-description: Code ramblings.
-about_name: Tyler King
-about_short: A self-taught, seasoned, versatile developer from Newfoundland.
+tagline: Code ramblings.
+description: Code ramblings
 baseurl: ""
 url: "https://osiset.com"
+logo: /assets/favicon-32x32.png
+lang: en
+
+about_name: Tyler King
+about_short: A self-taught, seasoned, versatile developer from Newfoundland.
 github_username: osiset
+social:
+  name: Tyler King
+  links:
+    - https://github.com/osiset
+
 markdown: kramdown
 css: inline
 sass:
   style: compressed
-paginate_path: /page/:num/
+
+  paginate_path: /page/:num/
 theme: minima
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo

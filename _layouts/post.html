@@ -3,13 +3,22 @@
 <article>
     <header>
         <h1>{{ page.title }}</h1>
-        <p><time datetime="{{ page.date }}">{{ page.date | date: "%b %-d,  %Y" }}</time></p>
+        <p><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %-d, %Y" }}</time></p>
     </header>
+
     {{ content }}
+
     <footer>
         <small>
-            <a href="https://github.com/{{ site.github_username }}/osiset.github.io/blob/master/{{ page.path }}" target="_blank" rel="noopener">Source</a>
+            <a href="https://github.com/{{ site.github_username }}/osiset.github.io/blob/master/{{ page.path }}" target="_blank" rel="noopener">Source</a> | <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-4.0</a>
         </small>
+
+        {%- assign post_year = page.date | date: "%Y" | plus: 0 -%}
+        {%- assign now_year = "now" | date: "%Y" | plus: 0 -%}
+        {%- assign diff_year = now_year | minus: post_year -%}
+        {%- if diff_year >= 2 -%}
+            <div class="warning post-old">This post is {{ diff_year }} years old and may contain outdated information.</div>
+        {%- endif -%}    
     </footer>
 </article>
 

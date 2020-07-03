@@ -7,9 +7,22 @@ body {
         padding-bottom: 3rem !important;
         font-size: 2.5rem;
 
-        h1 {
-            a {
-                text-decoration: none;
+        a {
+            text-decoration: none;
+        }
+
+        & > span {
+            display: block;
+            font-weight: bold;
+
+            &:first-child {
+                font-size: 2em;
+                margin: 0.67em 0;
+            }
+
+            &:last-child {
+                font-size: 1.17em;
+                margin: 1em 0;
             }
         }
     }
@@ -91,7 +104,17 @@ code {
         }
 
         footer {
+            margin-top: 5rem;
             text-align: right;
+        }
+
+        .warning.post-old {
+            padding: .5em;
+            font-size: 80%;
+            text-align: center;
+            font-style: italic;
+            background-color: lighten($heading, 35%);
+            margin: 1em 0 0 0;
         }
     }
 }

@@ -5,26 +5,21 @@
         No Javascript, no tracking, no external resources.
     -->
     <head>
-        {%- if page.is_home -%}
-            <title>{{ site.title }}</title>
-            <meta name="description" content="{{ site.description }}">
-        {%- else -%}
-            <title>{% if page.title %}{{ page.title }} &mdash; {% endif %}{{ site.title }}</title>
-        {%- endif -%}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {%- if site.css == 'inline' -%}
+        {% seo %}
+        {%- if site.css == 'inline' %}
             <style>{% capture inline-styles %}{% include style.scss %}{% endcapture %}{{ inline-styles | scssify }}</style>
-        {%- else -%}
+        {% else %}
             <link href="/css/style.css" rel="stylesheet">
-        {%- endif -%}
+        {% endif -%}
         <link href="/feed.xml" rel="self" type="application/atom+xml">
         <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/images/favicon.png" sizes="32x32" type="image/png">
     </head>
     <body class="{% if page.layout == 'home' %}home{% else %}post{% endif %}">
         <header class="container">
-            <h1><a href="/">{{ site.title }}</a></h1>
-            <h3>{{ site.description }}</h3>
+            <span><a href="/">{{ site.title }}</a></span>
+            <span>{{ site.tagline }}</span>
         </header>
         <main class="container">
