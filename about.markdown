@@ -44,6 +44,7 @@ A combination of two Egyptian gods &mdash; Osiris and his brother Set. Combining
 - [http_shopify_webhook](https://github.com/osiset/http_shopify_webhook) - Golang; Webhook verification for Shopify.
 - [Theme Deploy](https://github.com/osiset/Shopify-Theme-Deploy) - Golang; An automated, delta, theme release helper for Shopify.
 
+<!-- 
 ## Where I started
 
 Everyone has a story on how they got involved with development. Mine came out of necessity. Nerd-ily enough, I used to help manage sci-fi and Star Trek forums in the early 2000s. Forums we're hugely popular at the time - everyone had a forum for every subject you could think of. To keep up with the competition, forums often implemented things called mods. Mods required core code changes to the forum software which required someone to implement those changes.
@@ -54,4 +55,4 @@ I quickly moved onto getting heavily involved with Python for automation and web
 
 The 2000s we're a rocky time for development, it was a time of great change, spin-offs, and maturity for many languages and ecosystems for those languages. The web came into a heavy play. I eventually started my professional career a year after starting those mods of the forums. I began professionally with PHP, Python, and Ruby, as they were the job demands for the web at the time in my area; this is where my experience took off. I found my love for crafting backend systems for the web.
 
-Since then, I've taken what I've learned and continually applied it. I've worked with many name-brands in my career and developed enterprise solutions for them, as well as provide consultation.
+Since then, I've taken what I've learned and continually applied it. I've worked with many name-brands in my career and developed enterprise solutions for them, as well as provide consultation. -->
