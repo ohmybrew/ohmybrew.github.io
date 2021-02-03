@@ -34,11 +34,11 @@ body {
 
         hr {
             margin-bottom: 2em;
+            border-width: 0.1rem;
         }
 
         img {
             border-radius: 50%;
-            border: 0.3rem solid black;
             float: left;
             width: 5em;
             height: 5em;
@@ -49,12 +49,6 @@ body {
         div {
             padding-left: 10em;
         }
-    }
-}
-
-main {
-    h1, h2, h3, h4, h5, h6 {
-        color: $heading;
     }
 }
 
@@ -113,8 +107,17 @@ code {
             font-size: 80%;
             text-align: center;
             font-style: italic;
-            background-color: lighten($heading, 35%);
             margin: 1em 0 0 0;
         }
     }
+}
+
+#theme-switch {
+    width: 30px;
+    height: auto;
+    position: fixed;
+    bottom: 1%;
+    right: .5%;
+    opacity: 0.6;
+    cursor: pointer;
 }
