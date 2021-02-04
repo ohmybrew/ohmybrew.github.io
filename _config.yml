@@ -19,8 +19,9 @@ markdown: kramdown
 css: inline
 sass:
   style: compressed
+  sass_dir: _sass
 
-  paginate_path: /page/:num/
+paginate_path: /page/:num/
 theme: minima
 
 plugins:
