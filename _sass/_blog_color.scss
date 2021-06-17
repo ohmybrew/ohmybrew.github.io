@@ -10,11 +10,13 @@ body.scheme-light {
     }
 
     & > footer {
-        color: $light-footer-color;
-
-        img {
-            border: 0.3rem solid $light-img-border;
+        h3 {
+            color: $light-link;
         }
+
+        /* img {
+           border: 0.3rem solid $light-img-border;
+        } */
 
         hr {
             border-color: $light-footer-sep;
@@ -23,6 +25,7 @@ body.scheme-light {
         .button {
             background: $light-footer-btn-bkg;
             color: $light-footer-btn;
+            border-color: $light-footer-btn-filled-bkg;
 
             &.filled {
                 background: $light-footer-btn-filled-bkg;
@@ -37,7 +40,44 @@ body.scheme-light {
         }
     }
 
-    .post {
+    &.home {
+        time {
+            color: $light-meta;
+        }
+    }
+
+    &.post {
+        article {
+            header {
+                time {
+                    color: $light-meta;
+                }
+            }
+
+            code {
+                &.highlighter-rouge {
+                    border-color: $light-meta-accent;
+                    background: $light-bkg-alt;
+                }
+            }
+
+            pre {
+                border-color: $light-meta-accent;
+                border-left-color: $light-meta-accent;
+                background: $light-bkg-alt;
+            }
+
+            p {
+                a + em {
+                    color: $light-meta-accent;
+                }
+            }
+
+            blockquote {
+                border-left-color: $light-meta-accent;
+            }
+        }
+
         .warning.post-old {
             background-color: lighten($light-heading, 35%);
         }
@@ -84,7 +124,7 @@ body.scheme-dark {
         }
     }
 
-    .post {
+    &.post {
         .warning.post-old {
             background-color: lighten($dark-heading, 35%);
         }

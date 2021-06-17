@@ -2,27 +2,45 @@ $base-font-size: 1.8rem;
 $dark-mode: 0;
 $font-family: 'Roboto Mono', Helvetica, Arial, sans-serif;
 
-// Light scheme
+// Light scheme: Default
+// $light-bkg: white;
+// $light-font: #121212;
+// $light-heading: #949ca3;
+// $light-img-border: $light-font;
+// $light-link: black;
+// $light-meta: '';
+// $light-meta-accent: '';
+// $light-footer-color: black;
+// $light-footer-sep: $light-font;
+// $light-footer-btn-bkg: $light-bkg;
+// $light-footer-btn: $light-font;
+// $light-footer-btn-filled-bkg: $light-font;
+// $light-footer-btn-filled: $light-bkg;
+
+// Light scheme: Primer
 $light-bkg: white;
-$light-font: #121212;
-$light-heading: #949ca3;
+$light-bkg-alt: #f5f5f5;
+$light-font: #333;
+$light-heading: #c7511d;
 $light-img-border: $light-font;
-$light-link: black;
-$light-meta: '';
-$light-footer-color: black;
-$light-footer-sep: $light-font;
+$light-link: #437abe;
+$light-meta: #6e5692;
+$light-meta-accent: #6fc44c;
+$light-footer-color: $light-font;
+$light-footer-sep: $light-bkg-alt;
 $light-footer-btn-bkg: $light-bkg;
 $light-footer-btn: $light-font;
-$light-footer-btn-filled-bkg: $light-font;
+$light-footer-btn-filled-bkg: $light-meta;
 $light-footer-btn-filled: $light-bkg;
 
-// Dark scheme
+// Dark scheme: Default
 $dark-bkg: #1A1D21;
 $dark-font: #e0dab2;
 $dark-heading: #AF5543;
 $dark-img-border: black;
 $dark-link: $dark-heading;
 $dark-meta: #D49155;
+$dark-meta-accent: '';
 $dark-footer-color: white;
 $dark-footer-sep: $dark-footer-color;
 $dark-footer-btn-bkg: white;

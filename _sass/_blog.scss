@@ -59,7 +59,7 @@ ul {
 code {
     &.highlighter-rouge {
         font-size: 0.8em;
-        border: 1px dotted;
+        border: 2px dotted;
         padding: 0 0.4em;
     }
 }
@@ -94,6 +94,13 @@ code {
             img {
                 display: block;
                 margin: 0 auto;
+            }
+
+            a + em {
+                text-align: center;
+                font-size: .75em;
+                display: inherit;
+                margin-top: .5rem;
             }
         }
 
